@@ -1,0 +1,241 @@
+:root {
+	--main-color: #372415;
+	--alt-color: #f0674c;
+}
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+}
+
+body {
+	background-color: #ffdebf;
+	font-family: poppins;
+	/* height: 100vh; */
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+@media (max-width: 576px) {
+	.container-2 {
+		width: 90%;
+	}
+}
+
+.container-2 {
+	width: 46%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container-2 .header {
+	background-color: var(--alt-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 30px;
+	color: #fff;
+	border-radius: 30px;
+	height: 80px;
+}
+
+.header div {
+	display: flex;
+	flex-direction: column;
+}
+
+.header div {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.header div span {
+	font-weight: 300;
+	font-size: 16px;
+}
+
+/* End Header */
+
+.chart-container {
+	margin-top: 20px;
+	display: flex;
+	background-color: #fff;
+	flex-direction: column;
+	height: calc(100% - 160px);
+	border-radius: 30px;
+	padding: 20px 30px;
+}
+
+.chart-container > h1 {
+	color: var(--main-color);
+	margin-top: 0;
+}
+
+.chart-container .days {
+	display: flex;
+	flex-direction: column;
+}
+
+.days .days-columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 20px;
+}
+
+.days .days-columns .mon,
+.days .days-columns .tue,
+.days .days-columns .wed,
+.days .days-columns .thu,
+.days .days-columns .fri,
+.days .days-columns .sat,
+.days .days-columns .sun {
+	width: calc(100% / 8.5);
+	border-radius: 7px;
+	background-color: var(--alt-color);
+	transition: 0.2s;
+	cursor: pointer;
+	position: relative;
+}
+.days .days-columns .mon:hover,
+.days .days-columns .tue:hover,
+.days .days-columns .wed:hover,
+.days .days-columns .thu:hover,
+.days .days-columns .fri:hover,
+.days .days-columns .sat:hover,
+.days .days-columns .sun:hover {
+	background-color: #b4dfe5;
+}
+
+.mon {
+	height: 60px;
+}
+.tue {
+	height: 120px;
+}
+.wed {
+	height: 180px;
+}
+.thu {
+	height: 100px;
+}
+.fri {
+	height: 80px;
+}
+.sat {
+	height: 150px;
+}
+.sun {
+	height: 90px;
+}
+
+.days .days-names {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.days .days-names span {
+	width: calc(100% / 8.5);
+	text-align: center;
+	color: gray;
+}
+
+.chart-container hr {
+	width: 100%;
+	color: rgba(128, 128, 128, 0.37);
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: gray;
+}
+
+.footer div:not(:last-child) {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer div:not(:last-child) .price {
+	color: var(--main-color);
+	font-weight: bold;
+	font-size: 43px;
+}
+
+.footer div:not(:first-child) {
+	display: flex;
+	flex-direction: column;
+	direction: rtl;
+}
+
+.footer div:not(:first-child) .price {
+	color: var(--main-color);
+	font-weight: bold;
+}
+@media (max-width: 992px) {
+	.container-2 {
+		width: 95%;
+	}
+	.chart-container {
+		padding: 10px 20px;
+	}
+	.container-2 .header,
+	.chart-container {
+		border-radius: 11px;
+	}
+	.chart-container h1 {
+		font-size: 24px;
+	}
+	.days .days-columns .mon,
+	.days .days-columns .tue,
+	.days .days-columns .wed,
+	.days .days-columns .thu,
+	.days .days-columns .fri,
+	.days .days-columns .sat,
+	.days .days-columns .sun {
+		border-radius: 3px;
+	}
+	.price {
+		font-weight: 400;
+	}
+}
+
+.num {
+	position: absolute;
+	top: -39px;
+	left: -5px;
+	text-align: center;
+	background-color: var(--main-color);
+	color: #fff;
+	padding: 4px;
+	border-radius: 5px;
+}
